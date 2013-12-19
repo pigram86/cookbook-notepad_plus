@@ -18,7 +18,7 @@
 #
 # install notepad++
 windows_package "NotePad++" do 
-  source node[:notepad][:url]
+  source node['notepad']['url']
   action :install
   not_if{reboot_pending?}
 end
